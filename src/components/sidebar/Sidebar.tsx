@@ -114,7 +114,7 @@ const Sidebar = ({ children }: any) => {
   };
   return (
     <>
-      <div className="main-container">
+      <div className="flex">
         <motion.div
           animate={{
             width: isOpen ? "455px" : "75px",
@@ -128,7 +128,7 @@ const Sidebar = ({ children }: any) => {
           }}
           // className={loginpage ? `sidebar ` : `sidebar-none`}
         >
-          <div className="top_section">
+          <div className="flex items-center justify-between px-3 py-3 mx-3.5 my-3">
             <AnimatePresence>
               {isOpen && (
                 <div
