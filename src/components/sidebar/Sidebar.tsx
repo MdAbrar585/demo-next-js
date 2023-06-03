@@ -8,64 +8,30 @@ import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import "./Sidebar.css";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleSidebar } from "@/GlobalRedux/redux/actions/sidebarToggleAction";
 // import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import dashboard from "../../assets/icon/dashboard.png";
-import topUp from "../../assets/icon/top-up.png";
-import customer from "../../assets/icon/value.png";
-import wallet from "../../assets/icon/wallet.png";
-import buying from "../../assets/icon/smartphone.png";
-import sellingLogo from "../../assets/icon/loan.png";
-import futureTradingLogo from "../../assets/icon/stock-market.png";
-import shipingLogo from "../../assets/icon/express-delivery.png";
+// import topUp from "../../assets/icon/top-up.png";
+// import customer from "../../assets/icon/value.png";
+// import wallet from "../../assets/icon/wallet.png";
+// import buying from "../../assets/icon/smartphone.png";
+// import sellingLogo from "../../assets/icon/loan.png";
+// import futureTradingLogo from "../../assets/icon/stock-market.png";
+// import shipingLogo from "../../assets/icon/express-delivery.png";
 import carret24Logo from "../../assets/logo/Carratt24-01.png";
 import carret24LogoExpand from "../../assets/logo/output-onlinegiftools.gif";
 // import { Avatar } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
+import { RootState } from "@/GlobalRedux/store";
 
 const routes = [
   {
     path: "/",
-    name: "Dashboard",
+    name: "Counter Management",
     icon: <Image src={dashboard} alt="" />,
   },
-  {
-    path: "/deposit",
-    name: "Deposit Management",
-    icon: <Image src={topUp} alt="" />,
-  },
-  {
-    path: "/customer",
-    name: "Customer Management",
-    icon: <Image src={customer} alt="" />,
-  },
-  {
-    path: "/wallet",
-    name: "Wallet Management",
-    icon: <Image src={wallet} alt="" />,
-  },
-  {
-    path: "/buying",
-    name: "Buying Management",
-    icon: <Image src={buying} alt="" />,
-  },
-  {
-    path: "/selling",
-    name: "Selling Management",
-    icon: <Image src={sellingLogo} alt="" />,
-  },
-  {
-    path: "/futuretrading",
-    name: "Future Trading",
-    icon: <Image src={futureTradingLogo} alt="" />,
-  },
-  {
-    path: "/shipping",
-    name: "Shipping Management",
-    icon: <Image src={shipingLogo} alt="" />,
-  },
+  
   // {
   //   path: "/products",
   //   name: "Products Management",
@@ -83,23 +49,7 @@ const routes = [
   //     },
   //   ],
   // },
-  // {
-  //   path: "/seller",
-  //   name: "Seller Management",
-  //   icon: <img src={sellerLogo} alt="" />,
-  //   subRoutes: [
-  //     {
-  //       path: "/sellerList",
-  //       name: "Seller List",
-  //       icon: <img src={sellerListLogo} alt="" />,
-  //     },
-  //     {
-  //       path: "/sellerApprovalList",
-  //       name: "Seller Approval List",
-  //       icon: <img src={productApprove} alt="" />,
-  //     },
-  //   ],
-  // },
+  
 ];
 
 const Sidebar = ({ children }: any) => {
@@ -112,7 +62,8 @@ const Sidebar = ({ children }: any) => {
 
   // console.log("from sidebar ", singleUserData);
 
-  const { isOpen } = useSelector((state: any) => state.toggleSidebar);
+  // const { isOpen } = useSelector((state: any) => state.sidebartoggle);
+  const isOpen = useSelector((state: RootState) => state.sidebarToggle.isOpen);
   // const { isOpen } = true;
 
 //   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -122,11 +73,11 @@ const Sidebar = ({ children }: any) => {
 
   // console.log(isOpen);
 
-  const toggle = () => {
-    // setIsOpen(!isOpen);
-    dispatch(toggleSidebar());
-    console.log("click");
-  };
+  // const toggle = () => {
+  //   setIsOpen(!isOpen);
+  //   dispatch(toggleSidebar());
+  //   console.log("click");
+  // };
 
   //   const inputAnimation = {
   //     hidden: {

@@ -7,7 +7,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 // import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Link from "next/link";
-// import { reverseToggleSidebar } from "../../redux/actions/sidebarToggleAction";
 
 const menuAnimation = {
     hidden: {

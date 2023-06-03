@@ -2,12 +2,12 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from './Features/counter/counterSlice'
-import { sidebarToggleReducer } from "./redux/reducers/sidebarToggleReducer";
+import sidebarToggleReducer  from "./Features/sidebar/sidebarToggleSlice"
 
 export const store = configureStore({
     reducer: {
         counter: counterReducer,
-        toggleSidebar: sidebarToggleReducer,
+        sidebarToggle: sidebarToggleReducer,
 
     }
 })

@@ -18,10 +18,11 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import "./Navbar.css";
 // import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleSidebar, reverseToggleSidebar } from "@/GlobalRedux/redux/actions/sidebarToggleAction";
+import { toggleSidebar,reverseToggleSidebar } from "@/GlobalRedux/Features/sidebar/sidebarToggleSlice";
 import profile from "../../assets/icon/Ellipse 469.png";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import Image from "next/image";
+import { RootState } from "@/GlobalRedux/store";
 // import { useNavigate } from "react-router-dom";
 // import logout from "../../assets/icon/power-off.png";
 // import Divider from "@mui/material/Divider";
@@ -61,7 +62,9 @@ const Navbar = () => {
 
 //   console.log("loggedInUser", loggedInUser?.data?.email);
 
-  const { isOpen } = useSelector((state: any) => state.toggleSidebar);
+  // const { isOpen } = useSelector((state: any) => state.toggleSidebar);
+  const isOpen = useSelector((state: RootState) => state.sidebarToggle.isOpen);
+
   // const { isOpen } = true;
 
   console.log(isOpen);
