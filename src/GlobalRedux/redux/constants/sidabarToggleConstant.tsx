@@ -1,0 +1,3 @@
+'use client';
+export const SIDEBAR_TOGGLE = "SIDEBAR_TOGGLE";
+export const REVERSE_SIDEBAR_TOGGLE = "REVERSE_SIDEBAR_TOGGLE";

@@ -9,7 +9,7 @@ export default function Home() {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
   return (
-    <main className="flex flex-col m-10">
+    <main className="flex flex-col m-10 w-11/12">
       <button 
         className="rounded-full bg-teal-500 p-5"
         onClick={() => dispatch(increment())}

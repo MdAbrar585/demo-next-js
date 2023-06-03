@@ -1,0 +1,26 @@
+.navbar-profile-container{
+    display: flex;
+}
+.navbar-profile-name{
+    margin-right: 8px;
+    margin-top: 15px;
+}
+.navbar-profile-name > h6{
+    font-size: 12px;
+}
+.navbar-profile-icon{
+    margin: 10px 30px;
+}
+/* .navbar-profile-container::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 3px;
+    height: 80%;
+    bottom: 0;
+    left: -7px;
+} */
+
+.css-1e0d89p-MuiButtonBase-root-MuiIconButton-root:hover {
+    background-color: white !important;
+}
